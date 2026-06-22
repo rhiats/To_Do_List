@@ -20,6 +20,6 @@ MyButton.addEventListener("click", function() {
         listContainer.appendChild(newListItem);
 
         // 2. Clear the input field
-        currentText.value = '';
+        currentText = '';
     }
 });
