@@ -1,7 +1,8 @@
 //select button
 const MyButton = document.getElementById("input_button")
-// Creating an array
-const data_arr = [];
+
+// Load existing dataset OR start empty
+let data_arr = JSON.parse(localStorage.getItem("todo_dataset")) || [];
 
 // 2. Attach a listener
 MyButton.addEventListener("click", function() {
@@ -47,7 +48,13 @@ MyButton.addEventListener("click", function() {
             newListItem.remove()
         });
 
-        data_arr.push({currentText,todo_category})
+        category = todo_category.value
+        data_arr.push({
+            text: currentText,
+            category: category
+        })
+
+        localStorage.setItem("todo_dataset", JSON.stringify(data_arr));
     }
 });
 
