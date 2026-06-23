@@ -25,6 +25,8 @@ MyButton.addEventListener("click", function() {
 
         DeleteBtn.type = 'button';
 
+        DeleteBtn.className = "delete-btn";
+
         // 3. Add text content to the new item
         newListItem.textContent = currentText;
 
