@@ -8,22 +8,24 @@
     </head>
 
     <body>
-        <h1>My To-Do List</h1>
+        <div class="app">
+            <h1>My To-Do List</h1>
 
-        <input type="text" id="user_input"/>
-        <button id="input_button" type="button">Add Item</button>
-        
-        <label for="category">Choose a category:</label>
-        <select name="category" id="category" required>
-            <!-- The first option acts as a placeholder -->
-            <option value="errand">Select an option...</option>
-            <option value="work">Work</option>
-            <option value="errand">Errand</option>
-            <option value="health">Health</option>
-        </select>
+            <input type="text" id="user_input"/>
+            <button id="input_button" type="button">Add Item</button>
+            
+            <label for="category">Choose a category:</label>
+            <select name="category" id="category" required>
+                <!-- The first option acts as a placeholder -->
+                <option value="errand">Select an option...</option>
+                <option value="work">Work</option>
+                <option value="errand">Errand</option>
+                <option value="health">Health</option>
+            </select>
 
-        <button id="download_btn" type="button">Download Dataset</button>
+            <button id="download_btn" type="button">Download Dataset</button>
 
-        <ul id="My_List"></ul>
+            <ul id="My_List"></ul>
+        </div>
     </body>
 </html>

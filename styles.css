@@ -57,3 +57,13 @@ li {
     justify-content: space-between;
     align-items: center;
 }
+
+.delete-btn {
+    background: #e55039;
+    width: auto;
+    padding: 6px 10px;
+}
+
+.delete-btn:hover {
+    background: #c23616;
+}
