@@ -4,7 +4,7 @@ const MyButton = document.getElementById("input_button")
 // 2. Attach a listener
 MyButton.addEventListener("click", function() {
     const inputElement = document.getElementById("user_input")
-    const currentText = inputElement.value;
+    let currentText = inputElement.value;
 
     if (currentText.trim() !== ""){
         // 1. Find the existing list container
@@ -13,13 +13,27 @@ MyButton.addEventListener("click", function() {
         // 2. Create the new <li> element
         const newListItem = document.createElement('li');
 
+        // 2. Create the new delete button element
+        const DeleteBtn = document.createElement('button');
+
+        DeleteBtn.textContent = 'Delete Item';
+
+        DeleteBtn.type = 'button';
+
         // 3. Add text content to the new item
         newListItem.textContent = currentText;
 
         // 4. Append the new item to the list container
         listContainer.appendChild(newListItem);
 
+        newListItem.appendChild(DeleteBtn);
+
         // 2. Clear the input field
-        currentText = '';
+        inputElement.value = '';
+
+        DeleteBtn.addEventListener("click", function(){
+            console.log("Delete Button Clicked")
+        });
     }
 });
+
