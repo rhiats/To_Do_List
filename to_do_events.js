@@ -1,12 +1,14 @@
 //select button
 const MyButton = document.getElementById("input_button")
 // Creating an array
-const fruits = [];
+const data_arr = [];
 
 // 2. Attach a listener
 MyButton.addEventListener("click", function() {
     const inputElement = document.getElementById("user_input")
     let currentText = inputElement.value;
+
+    let todo_category = document.getElementById("category")
 
     if (currentText.trim() !== ""){
         // 1. Find the existing list container
@@ -25,8 +27,16 @@ MyButton.addEventListener("click", function() {
         // 3. Add text content to the new item
         newListItem.textContent = currentText;
 
+        // 2. Create the Category Text
+        const category_text = document.createElement('p');
+
+        // 2. Add text content to the element
+        category_text.textContent = todo_category.value;
+
         // 4. Append the new item to the list container
         listContainer.appendChild(newListItem);
+
+        newListItem.appendChild(category_text);
 
         newListItem.appendChild(DeleteBtn);
 
@@ -36,6 +46,8 @@ MyButton.addEventListener("click", function() {
         DeleteBtn.addEventListener("click", function(){
             newListItem.remove()
         });
+
+        data_arr.push({currentText,todo_category})
     }
 });
 
