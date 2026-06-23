@@ -8,8 +8,19 @@
 
     <body>
         <h1>My To-Do List</h1>
+
         <input type="text" id="user_input"/>
         <button id="input_button" type="button">Add Item</button>
+
+        <label for="category">Choose a category:</label>
+        <select name="category" id="category">
+            <!-- The first option acts as a placeholder -->
+            <option value="" disabled selected>Select an option...</option>
+            <option value="volvo">Work</option>
+            <option value="saab">Errand</option>
+            <option value="mercedes">Health</option>
+        </select>
+
         <ul id="My_List"></ul>
     </body>
 </html>

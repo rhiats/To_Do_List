@@ -32,7 +32,7 @@ MyButton.addEventListener("click", function() {
         inputElement.value = '';
 
         DeleteBtn.addEventListener("click", function(){
-            console.log("Delete Button Clicked")
+            newListItem.remove()
         });
     }
 });
