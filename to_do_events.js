@@ -1,5 +1,7 @@
 //select button
 const MyButton = document.getElementById("input_button")
+// Creating an array
+const fruits = [];
 
 // 2. Attach a listener
 MyButton.addEventListener("click", function() {
